@@ -8,7 +8,7 @@ header{
  	left: 0;
   right: 0;
 
-	#logo{
+	#logo img{
 		box-shadow:0 0 15px rgba(#000,.4);
 	}
 	nav{
@@ -51,4 +51,23 @@ header{
 		font-size:18px;
 		font-weight: 300;
 	}
+
+	.tagline-text{
+		padding-left:50px;
+	}
+}
+
+
+footer{
+	border-bottom:solid 10px $brand-default;
+	#footer-top{
+		padding:25px 0;
+	}
+	#footer-bottom{
+		text-align: center;
+		border-top:solid 1px rgba(#fff,.8);
+		@extend #footer-top;
+	}
+	color:rgba(#fff,.8);
+	background-color: $brand-gray;
 }
