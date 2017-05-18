@@ -12630,5 +12630,9 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-console.log("gulp bootstrap starter");
+$(document).ready(function(){
+	tagline = $('.tagline')
+	tagline.css('background-image', 'url(' + tagline.data('bg') + ')');
+	tagline.css('background-position', tagline.data('position'));
+})
 console.log('@muslihzarth');

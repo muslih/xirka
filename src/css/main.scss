@@ -1,3 +1,56 @@
 @import "variable";
 @import "bootstrap";
 @import "bootstrap/theme";
+
+
+header{
+	position: fixed;
+ 	left: 0;
+  right: 0;
+
+	#logo{
+		box-shadow:0 0 15px rgba(#000,.4);
+	}
+	nav{
+		display: inline-flex;
+	}
+	ul{
+		margin-top: 50px;
+	}
+	li{
+		display: inline-block;
+		a{
+			transition-duration: .5s;
+			display: block;
+			padding: 7px 10px;
+			font-size: 16px;
+			color:$brand-default;
+			&:hover{
+				color: inherit;
+				text-decoration: none;
+				box-shadow:0 1px 0px #f29100;
+			}
+		}
+	}
+}
+
+.tagline {
+	background-repeat:no-repeat;
+	overflow: hidden;
+
+	// div{
+		height: 100vh;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+	// }
+
+	h2{
+		font-size:40px;
+		font-weight: 400;
+	}
+	p{
+		font-size:18px;
+		font-weight: 300;
+	}
+}
