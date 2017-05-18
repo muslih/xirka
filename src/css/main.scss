@@ -2,17 +2,35 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
+body{
+	font-weight: 300;
+	line-height:25px;
+	font-family:helvetica;
+}
 
+p{
+	font-size:15px;
+}
 header{
+	transition-duration:.5s;
 	position: fixed;
  	left: 0;
   right: 0;
+  z-index: 90;
+  background:transparent;
+
+  &.fill{
+  	background:rgba(#fff,.9);
+  }
 
 	#logo img{
 		box-shadow:0 0 15px rgba(#000,.4);
 	}
 	nav{
 		display: inline-flex;
+		@media (max-width: $screen-xs-max) {
+      display: none;
+    }
 	}
 	ul{
 		margin-top: 50px;
@@ -45,11 +63,11 @@ header{
 
 	h2{
 		font-size:40px;
-		font-weight: 400;
+		font-weight: 300;
 	}
 	p{
 		font-size:18px;
-		font-weight: 300;
+		// font-weight: 300;
 	}
 
 	.tagline-text{
@@ -57,11 +75,59 @@ header{
 	}
 }
 
+.content{
+	background:#eee;
+	padding:30px 0;
+}
+
+
+.content-video{
+	transition-duration: .5s;
+	position:relative;
+	display:block;
+	background:#fff;
+	padding:10px;
+	overflow:hidden;
+	margin-bottom:30px;
+	img{
+		transition-duration: .5s;
+		width:100%;
+		opacity: .8;
+	}
+
+	h4{
+		transition-duration: .5s;
+		position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(#000,.7);
+    color: #fff;
+    padding: 15px;
+	}
+	&:hover{
+		transition-duration: .5s;
+		&>img{
+			transition-duration: .5s;
+			opacity: 1;
+		}
+		&>h4{
+			transition-duration: .5s;
+			bottom: 50px;
+		}
+	}
+}
 
 footer{
 	border-bottom:solid 10px $brand-default;
 	#footer-top{
 		padding:25px 0;
+	}
+	.column{
+		@media (max-width: $screen-xs-max) {
+      text-align: center;
+      margin-bottom:25px;
+    }
 	}
 	#footer-bottom{
 		text-align: center;
