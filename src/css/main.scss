@@ -35,6 +35,9 @@ img{
 	&.img-center{
 		display: block;
 		margin:auto;
+		@media (max-width: $screen-xs-max) {
+      width:100%;
+    }
 	}
 	&.img-left{
 		float: left;
