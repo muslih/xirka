@@ -18,9 +18,15 @@ header{
   right: 0;
   z-index: 90;
   background:transparent;
-
+	
+	@media (max-width: $screen-xs-max) {
+    text-align: center;
+  }
   &.fill{
   	background:rgba(#fff,.9);
+  	@media (max-width: $screen-xs-max) {
+      background:transparent;
+    }
   }
 
 	#logo img{
@@ -28,9 +34,11 @@ header{
 	}
 	nav{
 		display: inline-flex;
-		@media (max-width: $screen-xs-max) {
-      display: none;
-    }
+		ul{
+			@media (max-width: $screen-xs-max) {
+      	display: none;
+    	}
+		}
 	}
 	ul{
 		margin-top: 50px;
@@ -72,6 +80,14 @@ header{
 
 	.tagline-text{
 		padding-left:50px;
+		@media (max-width: $screen-xs-max) {
+      padding:0;
+      margin:50px;
+      background: rgba($brand-default,.8);
+      color:#fff;
+      padding:20px;
+      text-align: center;
+    }
 	}
 }
 
@@ -119,6 +135,9 @@ header{
 }
 
 footer{
+	p{
+		font-weight: 300;
+	}
 	border-bottom:solid 10px $brand-default;
 	#footer-top{
 		padding:25px 0;
