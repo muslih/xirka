@@ -23,9 +23,10 @@ blockquote{
 }
 
 dt{
-	font-size:16px;
+	font-size:20px;
 }
 dd{
+	font-size:18px;
 	font-style:italic;
 	margin-bottom:15px;
 }
@@ -133,6 +134,14 @@ header{
 	      color:#000;
 	      background:transparent;
 	    }
+		}
+
+		.tagline-text-white{
+			color:#fff;
+		}
+
+		.tagline-text-justify{
+			text-align: justify !important;
 		}
 		
 		@media (max-width: $screen-xs-max) {
