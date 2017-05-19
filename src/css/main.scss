@@ -97,7 +97,7 @@ header{
 		}
 		&.active, &:hover{
 			&> a{
-				color: inherit;
+				color: $brand-default;
 				text-decoration: none;
 				box-shadow:0 1px 0px #f29100;
 			}
