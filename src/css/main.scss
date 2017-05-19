@@ -115,6 +115,18 @@ header{
 
 	.tagline-text{
 		padding-left:50px;
+
+		.tagline-text-box-black{
+			padding:20px;
+			color:#fff;
+			background: rgba(#000,.7);
+			@media (max-width: $screen-xs-max) {
+	      padding:0;
+	      color:#000;
+	      background:transparent;
+	    }
+		}
+		
 		@media (max-width: $screen-xs-max) {
       padding:0;
       margin:50px;
@@ -124,6 +136,7 @@ header{
       text-align: center;
     }
 	}
+
 }
 
 .content{
