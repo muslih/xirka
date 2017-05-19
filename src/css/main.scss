@@ -35,7 +35,7 @@ img{
 	&.img-center{
 		display: block;
 		margin:auto;
-		@media (max-width: $screen-xs-max) {
+		@media (max-width: $screen-sm-max) {
       width:100%;
     }
 	}
