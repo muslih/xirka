@@ -134,6 +134,27 @@ header{
 	}
 }
 
+.content-title{
+	color:$brand-default;
+	font-weight:200;
+}
+
+.no-padding{
+	padding:0;
+}
+
+blockquote{
+	&.dark-border{
+		border-left: solid 5px darken(#eee,15%);
+	}
+}
+
+img{
+	&.img-center{
+		display: block;
+		margin:auto;
+	}
+}
 footer{
 	p{
 		font-weight: 300;
