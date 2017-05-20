@@ -119,7 +119,7 @@ header{
 			overflow: hidden;
 			li{
 				display: block;
-				&:hover{
+				&:hover,&.active{
 					background:darken($brand-default,10%);
 					&>a{
 						color:#fff;
@@ -131,7 +131,7 @@ header{
 			}
 		}
 
-		&.active, &:hover{
+		&:hover,&.active{
 			transition-duration: .5s;
 			&> a{
 				color: $brand-default;
@@ -143,10 +143,20 @@ header{
 				display: block;
 				opacity: 1;
 				visibility: visible;
+				// height: 0%;
+			}
+		}
+
+		&:hover{
+			&>ul{
 				height: 300%;
 			}
 		}
 	}
+}
+
+header li:has(> .active){
+	background:red;
 }
 
 .tagline {
