@@ -171,6 +171,16 @@ header{
 	padding:30px 0;
 }
 
+.product{
+	.img-thumbnail{
+		margin-right: 15px;
+	}
+	.content-title{
+		clear:none;
+		margin-top: 10px;
+	}
+}
+
 
 .content-video{
 	transition-duration: .5s;
@@ -215,6 +225,8 @@ header{
 	font-weight:200;
 	margin-top:25px;
 }
+
+
 
 footer{
 	h5{
