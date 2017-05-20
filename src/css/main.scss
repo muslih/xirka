@@ -51,6 +51,7 @@ img{
 }
 
 ul,ol{
+
 	&.inline{
 		display: inline-block;
 	}
@@ -93,7 +94,9 @@ header{
 		margin-top: 50px;
 	}
 	li{
+		transition-duration: .5s;
 		display: inline-block;
+		position:relative;
 		a{
 			transition-duration: .5s;
 			display: block;
@@ -101,11 +104,46 @@ header{
 			font-size: 16px;
 			color:$brand-default;
 		}
+
+		ul{
+			transition-duration: .5s;
+			opacity: 0;
+			visibility: hidden;
+			background:$brand-default;
+			position:absolute;
+			margin:0;
+			padding:0;
+			left:0px;
+			right:-130px;
+			height: 0px;
+			overflow: hidden;
+			li{
+				display: block;
+				&:hover{
+					background:darken($brand-default,10%);
+					&>a{
+						color:#fff;
+					}
+				}
+			}
+			a{
+				color:rgba(#fff,.8);
+			}
+		}
+
 		&.active, &:hover{
+			transition-duration: .5s;
 			&> a{
 				color: $brand-default;
 				text-decoration: none;
 				box-shadow:0 1px 0px #f29100;
+			}
+			&>ul{
+				transition-duration: .5s;
+				display: block;
+				opacity: 1;
+				visibility: visible;
+				height: 300%;
 			}
 		}
 	}
